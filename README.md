@@ -1,43 +1,160 @@
 # ❤️ Heart Disease Prediction using Machine Learning
 
-## 📌 Project Overview
+A Machine Learning project that predicts the likelihood of heart disease using **Logistic Regression**. This project demonstrates the complete supervised machine learning workflow, from data preprocessing and exploratory data analysis (EDA) to model training, evaluation, and prediction on new patient data.
 
-This project predicts whether a patient is likely to have heart disease using **Logistic Regression**, a supervised machine learning algorithm. The model is trained on a heart disease dataset containing various medical attributes such as age, cholesterol level, blood pressure, chest pain type, and other health indicators.
+---
 
-The project demonstrates the complete machine learning workflow, including data preprocessing, exploratory data analysis (EDA), feature scaling, model training, evaluation, and prediction on new patient data.
+## 📖 Project Overview
+
+Heart disease is one of the leading causes of death worldwide. Early prediction can assist healthcare professionals in identifying high-risk patients and making informed decisions.
+
+This project uses a **Logistic Regression** classifier trained on a heart disease dataset to predict whether a patient is likely to have heart disease based on several medical attributes.
+
+The project covers the complete machine learning pipeline, including:
+
+* Data Loading
+* Data Inspection
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Feature Engineering
+* Feature Scaling
+* Model Training
+* Model Evaluation
+* Prediction on New Patient Data
+* Model Saving
 
 ---
 
 ## 🎯 Objectives
 
-* Predict the presence of heart disease using patient medical data.
-* Perform data preprocessing and exploratory data analysis.
-* Train a Logistic Regression classification model.
-* Evaluate the model using standard classification metrics.
-* Predict heart disease for new patient data.
+* Develop a supervised machine learning model for heart disease prediction.
+* Analyze and visualize the dataset using Exploratory Data Analysis (EDA).
+* Preprocess the data for improved model performance.
+* Train and evaluate a Logistic Regression model.
+* Predict heart disease using new patient information.
+* Save the trained model for future deployment.
 
 ---
 
-## 📂 Dataset
+## 📂 Repository Structure
 
-**Dataset:** Heart Disease Dataset
+```text
+Heart-Disease-Prediction/
+│
+├── data/
+│   └── heart.csv
+│
+├── model/
+│   └── heart_disease_model.pkl
+│
+├── notebook/
+│   └── heart_disease_prediction.ipynb
+│
+├── results/
+│   ├── heart_disease_distribution.png
+│   ├── age_distribution.png
+│   ├── gender_distribution.png
+│   ├── chest_pain_distribution.png
+│   ├── correlation_heatmap.png
+│   └── confusion_matrix.png
+│
+├── requirements.txt
+└── README.md
+```
 
-**Features**
+---
 
-* Age
-* Sex
-* Chest Pain Type (cp)
-* Resting Blood Pressure (trestbps)
-* Cholesterol (chol)
-* Fasting Blood Sugar (fbs)
-* Resting ECG (restecg)
-* Maximum Heart Rate Achieved (thalach)
-* Exercise Induced Angina (exang)
-* Oldpeak
-* Slope
-* Number of Major Vessels (ca)
-* Thal
-* Target (Heart Disease)
+## 📊 Dataset Information
+
+The dataset contains medical information collected from patients and is used to predict the presence of heart disease.
+
+### Features
+
+| Feature  | Description                          |
+| -------- | ------------------------------------ |
+| age      | Age of the patient                   |
+| sex      | Gender (1 = Male, 0 = Female)        |
+| cp       | Chest Pain Type                      |
+| trestbps | Resting Blood Pressure               |
+| chol     | Serum Cholesterol                    |
+| fbs      | Fasting Blood Sugar                  |
+| restecg  | Resting Electrocardiographic Results |
+| thalach  | Maximum Heart Rate Achieved          |
+| exang    | Exercise Induced Angina              |
+| oldpeak  | ST Depression                        |
+| slope    | Slope of Peak Exercise ST Segment    |
+| ca       | Number of Major Vessels              |
+| thal     | Thalassemia                          |
+| target   | Heart Disease (0 = No, 1 = Yes)      |
+
+---
+
+## 📈 Exploratory Data Analysis
+
+The following visualizations were performed:
+
+* Heart Disease Distribution
+* Age Distribution
+* Gender Distribution
+* Chest Pain Type Distribution
+* Correlation Heatmap
+* Confusion Matrix
+
+These analyses provide insights into the dataset and help understand feature relationships before model training.
+
+---
+
+## ⚙️ Data Preprocessing
+
+The dataset was preprocessed by:
+
+* Checking missing values
+* Removing duplicate records
+* Separating input features and target variable
+* Splitting data into training and testing sets
+* Standardizing numerical features using **StandardScaler**
+
+---
+
+## 🤖 Machine Learning Model
+
+**Algorithm Used**
+
+* Logistic Regression
+
+### Why Logistic Regression?
+
+* Suitable for binary classification problems.
+* Fast and computationally efficient.
+* Easy to interpret.
+* Performs well on structured tabular datasets.
+
+---
+
+## 📊 Model Evaluation
+
+The trained model was evaluated using:
+
+* Accuracy Score
+* Confusion Matrix
+* Classification Report
+
+  * Precision
+  * Recall
+  * F1-Score
+
+---
+
+## 🔮 Prediction
+
+The trained model can predict whether a new patient is likely to have heart disease.
+
+Example output:
+
+```text
+Prediction: Heart Disease Detected
+Probability of Heart Disease: 88.17%
+```
 
 ---
 
@@ -54,80 +171,15 @@ The project demonstrates the complete machine learning workflow, including data 
 
 ---
 
-## 🤖 Machine Learning Algorithm
-
-* Logistic Regression
-
----
-
-## 📊 Project Workflow
-
-1. Import Required Libraries
-2. Load Dataset
-3. Dataset Inspection
-4. Data Preprocessing
-5. Exploratory Data Analysis (EDA)
-6. Feature Selection
-7. Train-Test Split
-8. Feature Scaling
-9. Model Training
-10. Model Evaluation
-11. Prediction on New Patient Data
-12. Save Trained Model
-
----
-
-## 📈 Model Evaluation
-
-The model is evaluated using:
-
-* Accuracy Score
-* Confusion Matrix
-* Classification Report
-
-  * Precision
-  * Recall
-  * F1-Score
-
----
-
-## 🔮 Prediction
-
-The trained model can predict whether a new patient is likely to have heart disease based on the provided medical information.
-
-Example output:
-
-```
-Prediction: Heart Disease Detected
-
-Probability: 91.24%
-```
-
----
-
-## 📁 Project Structure
-
-```
-Heart-Disease-Prediction/
-│
-├── heart_disease_prediction.ipynb
-├── heart.csv
-├── heart_disease_model.pkl
-├── requirements.txt
-└── README.md
-```
-
----
-
-## ⚙️ Installation
+## 🚀 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Heart-Disease-Prediction.git
+git clone https://github.com/vanshnain-builds/Heart-Disease-Prediction.git
 ```
 
-Navigate to the project folder:
+Move into the project directory:
 
 ```bash
 cd Heart-Disease-Prediction
@@ -139,11 +191,19 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-Run the Jupyter Notebook:
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
+
+Open:
+
+```text
+notebook/heart_disease_prediction.ipynb
+```
+
+Run all cells sequentially.
 
 ---
 
@@ -160,19 +220,19 @@ joblib
 
 ---
 
-## 🚀 Future Improvements
+## 📌 Future Improvements
 
-* Compare multiple machine learning algorithms.
-* Perform hyperparameter tuning.
+* Compare multiple classification algorithms such as Random Forest, Support Vector Machine, K-Nearest Neighbors, and XGBoost.
+* Perform hyperparameter tuning using GridSearchCV.
+* Improve feature engineering and feature selection.
 * Deploy the model using Streamlit or Flask.
-* Use larger and more diverse datasets.
-* Improve prediction accuracy through feature engineering.
+* Integrate Explainable AI techniques such as SHAP for model interpretability.
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is developed for learning and educational purposes.
+This project is intended for educational and learning purposes.
 
 ---
 
@@ -182,8 +242,15 @@ This project is developed for learning and educational purposes.
 
 B.Tech – Artificial Intelligence & Machine Learning
 
-Interested in Machine Learning, Artificial Intelligence, Data Science, and AI Engineering.
+KIET Group of Institutions
+
+Interests:
+
+* Artificial Intelligence
+* Machine Learning
+* Data Science
+* AI Engineering
 
 ---
 
-⭐ If you found this project helpful, consider giving it a star on GitHub!
+### ⭐ If you found this project useful, consider giving it a star on GitHub!
