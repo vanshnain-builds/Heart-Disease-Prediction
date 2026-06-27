@@ -1,42 +1,46 @@
 # ❤️ Heart Disease Prediction using Machine Learning
 
-A Machine Learning project that predicts the likelihood of heart disease using **Logistic Regression**. This project demonstrates the complete supervised machine learning workflow, from data preprocessing and exploratory data analysis (EDA) to model training, evaluation, and prediction on new patient data.
-
----
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy)
+![License](https://img.shields.io/badge/License-Educational-green)
 
 ## 📖 Project Overview
 
-Heart disease is one of the leading causes of death worldwide. Early prediction can assist healthcare professionals in identifying high-risk patients and making informed decisions.
+Heart Disease Prediction is a supervised Machine Learning project that predicts whether a patient is likely to have heart disease based on various clinical and medical parameters.
 
-This project uses a **Logistic Regression** classifier trained on a heart disease dataset to predict whether a patient is likely to have heart disease based on several medical attributes.
+The project demonstrates the complete Machine Learning workflow, beginning with data loading and preprocessing, followed by exploratory data analysis (EDA), feature scaling, model training, evaluation, and prediction on new patient data.
 
-The project covers the complete machine learning pipeline, including:
-
-* Data Loading
-* Data Inspection
-* Data Cleaning
-* Exploratory Data Analysis (EDA)
-* Feature Engineering
-* Feature Scaling
-* Model Training
-* Model Evaluation
-* Prediction on New Patient Data
-* Model Saving
+This project is intended as a beginner-friendly implementation of binary classification using **Logistic Regression** while following standard machine learning practices.
 
 ---
 
-## 🎯 Objectives
+# ❗ Problem Statement
 
-* Develop a supervised machine learning model for heart disease prediction.
-* Analyze and visualize the dataset using Exploratory Data Analysis (EDA).
-* Preprocess the data for improved model performance.
-* Train and evaluate a Logistic Regression model.
-* Predict heart disease using new patient information.
+Heart disease is one of the leading causes of death worldwide. Early identification of individuals at risk can significantly improve treatment planning and reduce mortality.
+
+Healthcare professionals often analyze multiple medical parameters before diagnosing heart disease. This process can be time-consuming and may vary depending on clinical experience.
+
+The objective of this project is to develop a Machine Learning model capable of predicting whether a patient is likely to have heart disease using medical attributes such as age, blood pressure, cholesterol level, chest pain type, maximum heart rate, ECG results, and other clinical measurements.
+
+The developed model can assist healthcare professionals by providing quick and reliable predictions that support medical decision-making.
+
+---
+
+# 🎯 Objectives
+
+* Predict heart disease using Supervised Machine Learning.
+* Understand the dataset through Exploratory Data Analysis.
+* Clean and preprocess medical data.
+* Train a Logistic Regression classification model.
+* Evaluate model performance using standard evaluation metrics.
+* Predict heart disease for new patient data.
 * Save the trained model for future deployment.
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 
 ```text
 Heart-Disease-Prediction/
@@ -51,47 +55,131 @@ Heart-Disease-Prediction/
 │   └── heart_disease_prediction.ipynb
 │
 ├── results/
-│   ├── heart_disease_distribution.png
 │   ├── age_distribution.png
-│   ├── gender_distribution.png
 │   ├── chest_pain_distribution.png
+│   ├── confusion_matrix.png
 │   ├── correlation_heatmap.png
-│   └── confusion_matrix.png
+│   ├── gender_distribution.png
+│   └── heart_disease_distribution.png
 │
 ├── requirements.txt
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 📊 Dataset Information
+# 📊 Dataset
 
-The dataset contains medical information collected from patients and is used to predict the presence of heart disease.
+The project uses the **Heart Disease Dataset**, which contains medical records of patients used for predicting the presence of heart disease.
 
-### Features
+### Dataset Information
 
-| Feature  | Description                          |
-| -------- | ------------------------------------ |
-| age      | Age of the patient                   |
-| sex      | Gender (1 = Male, 0 = Female)        |
-| cp       | Chest Pain Type                      |
-| trestbps | Resting Blood Pressure               |
-| chol     | Serum Cholesterol                    |
-| fbs      | Fasting Blood Sugar                  |
-| restecg  | Resting Electrocardiographic Results |
-| thalach  | Maximum Heart Rate Achieved          |
-| exang    | Exercise Induced Angina              |
-| oldpeak  | ST Depression                        |
-| slope    | Slope of Peak Exercise ST Segment    |
-| ca       | Number of Major Vessels              |
-| thal     | Thalassemia                          |
-| target   | Heart Disease (0 = No, 1 = Yes)      |
+* Total Records: **1025**
+* Total Features: **13**
+* Target Variable: **Heart Disease**
+* Task Type: **Binary Classification**
+
+### Features Used
+
+| Feature  | Description                     |
+| -------- | ------------------------------- |
+| age      | Age of the patient              |
+| sex      | Gender                          |
+| cp       | Chest Pain Type                 |
+| trestbps | Resting Blood Pressure          |
+| chol     | Cholesterol Level               |
+| fbs      | Fasting Blood Sugar             |
+| restecg  | Resting ECG Results             |
+| thalach  | Maximum Heart Rate Achieved     |
+| exang    | Exercise Induced Angina         |
+| oldpeak  | ST Depression                   |
+| slope    | Slope of ST Segment             |
+| ca       | Number of Major Vessels         |
+| thal     | Thalassemia                     |
+| target   | Heart Disease (0 = No, 1 = Yes) |
 
 ---
 
-## 📈 Exploratory Data Analysis
+# 🔄 Methodology
 
-The following visualizations were performed:
+The project follows a standard Machine Learning pipeline.
+
+### Step 1 : Import Libraries
+
+Import all required libraries for data manipulation, visualization, machine learning, and model evaluation.
+
+### Step 2 : Load Dataset
+
+Read the Heart Disease dataset using Pandas.
+
+### Step 3 : Data Inspection
+
+Analyze:
+
+* Dataset Shape
+* Column Information
+* Data Types
+* Statistical Summary
+
+### Step 4 : Data Preprocessing
+
+* Check Missing Values
+* Remove Duplicate Records
+* Verify Data Types
+
+### Step 5 : Exploratory Data Analysis (EDA)
+
+Visualize the dataset using:
+
+* Heart Disease Distribution
+* Age Distribution
+* Gender Distribution
+* Chest Pain Distribution
+* Correlation Heatmap
+
+### Step 6 : Feature Selection
+
+Separate the dataset into:
+
+* Features (X)
+* Target Variable (y)
+
+### Step 7 : Train-Test Split
+
+Split the dataset into training and testing sets using an 80:20 ratio.
+
+### Step 8 : Feature Scaling
+
+Standardize feature values using **StandardScaler**.
+
+### Step 9 : Model Training
+
+Train a **Logistic Regression** classifier.
+
+### Step 10 : Model Evaluation
+
+Evaluate the model using:
+
+* Accuracy Score
+* Confusion Matrix
+* Precision
+* Recall
+* F1-Score
+
+### Step 11 : Prediction
+
+Predict heart disease for new patient data.
+
+### Step 12 : Save Model
+
+Save the trained model using **Joblib**.
+
+---
+
+# 📈 Exploratory Data Analysis
+
+The following visualizations were generated during the analysis.
 
 * Heart Disease Distribution
 * Age Distribution
@@ -100,65 +188,101 @@ The following visualizations were performed:
 * Correlation Heatmap
 * Confusion Matrix
 
-These analyses provide insights into the dataset and help understand feature relationships before model training.
+All generated figures are available inside the **results/** directory.
 
 ---
 
-## ⚙️ Data Preprocessing
+# ⚙️ Data Preprocessing
 
-The dataset was preprocessed by:
+The dataset was preprocessed using the following techniques:
 
-* Checking missing values
-* Removing duplicate records
-* Separating input features and target variable
-* Splitting data into training and testing sets
-* Standardizing numerical features using **StandardScaler**
+* Missing Value Analysis
+* Duplicate Record Removal
+* Feature Selection
+* Train-Test Split
+* Standardization using StandardScaler
+
+These preprocessing steps improve model performance and reduce bias during training.
 
 ---
 
-## 🤖 Machine Learning Model
+# 🤖 Machine Learning Model
 
-**Algorithm Used**
+## Algorithm Used
 
-* Logistic Regression
+**Logistic Regression**
 
 ### Why Logistic Regression?
 
-* Suitable for binary classification problems.
-* Fast and computationally efficient.
-* Easy to interpret.
-* Performs well on structured tabular datasets.
+* Efficient binary classification algorithm.
+* Easy to understand and interpret.
+* Fast model training.
+* Works well on structured datasets.
+* Suitable for medical prediction problems.
 
 ---
 
-## 📊 Model Evaluation
+# 📊 Results
 
-The trained model was evaluated using:
+The trained model successfully learned the relationship between patient medical attributes and the target variable.
+
+### Evaluation Metrics
 
 * Accuracy Score
 * Confusion Matrix
-* Classification Report
+* Precision
+* Recall
+* F1-Score
 
-  * Precision
-  * Recall
-  * F1-Score
+### Model Accuracy
+
+**XX.XX%**
+
+> Replace **XX.XX%** with the accuracy obtained after training.
 
 ---
 
-## 🔮 Prediction
+# 🔮 Prediction Example
 
-The trained model can predict whether a new patient is likely to have heart disease.
-
-Example output:
+### Example Input
 
 ```text
-Prediction: Heart Disease Detected
-Probability of Heart Disease: 88.17%
+Age = 52
+Sex = Male
+Chest Pain Type = 2
+Blood Pressure = 130
+Cholesterol = 230
+Maximum Heart Rate = 150
+```
+
+### Example Output
+
+```text
+Prediction:
+Heart Disease Detected
+
+Probability:
+88.17%
 ```
 
 ---
 
-## 🛠️ Technologies Used
+# 🖼️ Output Visualizations
+
+The repository includes the following generated outputs:
+
+* Heart Disease Distribution
+* Age Distribution
+* Gender Distribution
+* Chest Pain Distribution
+* Correlation Heatmap
+* Confusion Matrix
+
+These images are available in the **results/** folder.
+
+---
+
+# 🛠️ Technologies Used
 
 * Python
 * Pandas
@@ -171,45 +295,45 @@ Probability of Heart Disease: 88.17%
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
 git clone https://github.com/vanshnain-builds/Heart-Disease-Prediction.git
 ```
 
-Move into the project directory:
+Move into the project directory
 
 ```bash
 cd Heart-Disease-Prediction
 ```
 
-Install the required packages:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Launch Jupyter Notebook:
+Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+Open
 
 ```text
 notebook/heart_disease_prediction.ipynb
 ```
 
-Run all cells sequentially.
+Run all notebook cells sequentially.
 
 ---
 
-## 📦 Requirements
+# 📦 Requirements
 
-```
+```text
 pandas
 numpy
 matplotlib
@@ -220,37 +344,42 @@ joblib
 
 ---
 
-## 📌 Future Improvements
+# 🚀 Future Improvements
 
-* Compare multiple classification algorithms such as Random Forest, Support Vector Machine, K-Nearest Neighbors, and XGBoost.
-* Perform hyperparameter tuning using GridSearchCV.
-* Improve feature engineering and feature selection.
-* Deploy the model using Streamlit or Flask.
-* Integrate Explainable AI techniques such as SHAP for model interpretability.
-
----
-
-## 📜 License
-
-This project is intended for educational and learning purposes.
+* Compare multiple Machine Learning algorithms.
+* Hyperparameter tuning using GridSearchCV.
+* Feature Engineering.
+* Deploy using Streamlit.
+* Build a Flask REST API.
+* Explain predictions using SHAP.
+* Train on larger datasets for improved generalization.
 
 ---
 
-## 👨‍💻 Author
+# 📜 License
+
+This project is created for educational and learning purposes.
+
+---
+
+# 👨‍💻 Author
 
 **Vansh Nain**
 
-B.Tech – Artificial Intelligence & Machine Learning
+**B.Tech – Artificial Intelligence & Machine Learning**
 
-KIET Group of Institutions
+**KIET Group of Institutions**
 
-Interests:
+### Areas of Interest
 
-* Artificial Intelligence
+* AI Engineering
 * Machine Learning
 * Data Science
-* AI Engineering
+* Deep Learning
+
 
 ---
 
-### ⭐ If you found this project useful, consider giving it a star on GitHub!
+## 🌟 Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
